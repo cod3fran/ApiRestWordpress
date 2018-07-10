@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <span>Blog List</span>
+</mat-toolbar>
+<div class="page-wrapper">
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <app-post *ngFor="let post of posts$ | async" [@post]="post"></app-post>
+  </div>
+</div>

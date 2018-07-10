@@ -1,0 +1,23 @@
+<mat-card fxFlex="calc(33% - 16px)">
+  <mat-card-header>
+    <mat-card-title>{{ post.title.rendered }}</mat-card-title>
+    <mat-card-subtitle>{{ post.date_gmt | date }}</mat-card-subtitle>
+  </mat-card-header>
+  <img *ngIf="featured" matCardImage [src]="featured.guid.rendered">
+  <mat-card-content [innerHTML]="'<h1> content rendered </h1> \r <p>' + post.content.rendered + '</p> \r <h1> excerpt rendered </h1> <p>' + post.excerpt.rendered + '</p>'"></mat-card-content>
+  <mat-card-footer>
+    <div class="row">
+      <div class="col-sm">
+        <mat-card-actions align="start">
+          <a mat-button [href]="post.link">View</a>
+        </mat-card-actions>
+      </div>
+      <div class="col-sm">
+        <mat-card-actions align="start">
+          <div *ngIf="comments.length > 0" class="btn">{{comments.length}} Commentaire(s)</div>
+        </mat-card-actions>
+      </div>
+    </div>
+
+  </mat-card-footer>
+</mat-card>
