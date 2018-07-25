@@ -1,0 +1,22 @@
+<mat-card fxFlex="calc(33% - 16px)">
+  <mat-card-header>
+    <mat-card-title>{{ article.titre }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h1> Resume </h1>
+    <p> {{article.resume}}</p>
+    <h1> Corps </h1>
+    <p>{{article.content}}</p>
+    <h1> Image</h1>
+    <img [src]="urlServeurImages + article.image.data.url">
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="row">
+      <div class="col-sm">
+        <mat-card-actions align="start">
+          <div class="btn"> Id {{article.id}}</div>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card-footer>
+</mat-card>

@@ -8,13 +8,21 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostComponent } from './post/post.component';
 import {AppMaterialModule} from './app-material.module';
 import {HttpClientModule} from '@angular/common/http';
+import { CockpitListComponent } from './cockpit-list/cockpit-list.component';
+import { CockpitArticleComponent } from './cockpit-article/cockpit-article.component';
+import { DirectusListComponent } from './directus-list/directus-list.component';
+import { DirectusArticleComponent } from './directus-article/directus-article.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
-    PostComponent
+    PostComponent,
+    CockpitListComponent,
+    CockpitArticleComponent,
+    DirectusListComponent,
+    DirectusArticleComponent
   ],
   imports: [
     BrowserModule,

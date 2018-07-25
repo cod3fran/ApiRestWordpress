@@ -1,0 +1,29 @@
+<mat-card fxFlex="calc(33% - 16px)">
+  <mat-card-header>
+    <mat-card-title>{{ article.Titre }}</mat-card-title>
+    <mat-card-subtitle>Créé le {{ article._created | date }}</mat-card-subtitle>
+    <mat-card-subtitle>Modifié le {{ article._modified | date }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <h1> Resume </h1>
+    <p> {{article.Resume}}</p>
+    <h1> Corps </h1>
+    <p>{{article.Corps}}</p>
+    <h1> Image</h1>
+    <img [src]="urlServeurImages + article.Image.path">
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="row">
+      <div class="col-sm">
+        <mat-card-actions align="start">
+          <div class="btn">Id {{article._id}}</div>
+        </mat-card-actions>
+      </div>
+      <div class="col-sm">
+        <mat-card-actions align="start">
+          <div class="btn">Posté par {{article._by}}</div>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card-footer>
+</mat-card>
